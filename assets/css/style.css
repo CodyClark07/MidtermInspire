@@ -1,0 +1,17 @@
+#todo-error{
+  color: red;
+  font-size: 2em;
+}
+
+#bg-image{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.todoCard{
+  height: 150px;
+  width: 150px;
+  background-color: rgba(210, 105, 30, 0.767);
+  box-shadow: aquamarine;
+  border:solid 1px black;
+}
