@@ -9,8 +9,13 @@ const weatherApi = axios.create({
 
 class WeatherService {
   changeF_C() {
+
     let temp = store.State.weather.f_c;
-    temp == false ? (temp = true) : (temp = false)
+    console.log(temp)
+    temp == false ? (temp = true) :
+      (temp = false)
+    store.State.weather.f_c = temp
+    store.commit("weather", store.State.weather)
     console.log(temp)
   }
   getWeather() {

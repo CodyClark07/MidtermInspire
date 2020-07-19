@@ -7,9 +7,6 @@ import weatherService from "../services/weather-service.js";
 
 //TODO Complete rendering data to the screen
 function drawWeather() {
-  console.log("THE WEATHER MAN SAYS:", store.State.weather);
-
-
   document.getElementById("weather").innerHTML = store.State.weather.Template;
 }
 export default class WeatherController {
@@ -19,7 +16,7 @@ export default class WeatherController {
   }
   changeF_C() {
     weatherService.changeF_C()
-    drawWeather()
+
   }
 }
 

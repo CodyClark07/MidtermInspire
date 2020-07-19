@@ -9,7 +9,8 @@ export default class Quote {
         return /*html*/`
         <div>
     <div class="author-show">${this.description}
-    <div class="author-hide">${this.author}</div></div>
+    <div class="author-hide">${this.author}</div>
+    </div>
     `
     }
 }
