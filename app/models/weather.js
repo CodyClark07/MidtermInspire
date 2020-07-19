@@ -11,6 +11,10 @@ export default class Weather {
     this.city = data.name
     this.faren = data.main.temp
     this.celcius = (data.main.temp - 32) * 5 / 9
+    if (data.weather) {
+      this.icon = data.weather[0].icon
+    }
+    this.f_c = false
   }
 
 
@@ -18,10 +22,11 @@ export default class Weather {
 
   get Template() {
     let template = /* html */ `
-    <div class=" border border-rounded shadow-lg text-center text-white bg-dark">
+    <div class=" border border-rounded shadow-lg text-center text-white bg-weather">
 
-    <h2>City: ${this.city}</h2>
-    <h2>Temp: ${this.faren}°F</h2>
+    <h2> ${this.city}</h2>
+    <h2 onclick="app.weatherController.changeF_C()"> ${this.f_c == false ? `${this.faren}°F` : `${this.celcius}°C`}</h2>
+    <img src="http://openweathermap.org/img/w/` + `${this.icon}` + `.png">
     </div>`
 
     return template

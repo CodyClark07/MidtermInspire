@@ -7,13 +7,18 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Inspire</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body id="bg-image">
-	<div id="weather" class="w-25 float-right bg-transparent">
+	<section>
+		<div id="weather" class="w-25 float-right container-fluid ">
 
-	</div>
+		</div>
+
+	</section>
 
 	<div id="quote">
 
@@ -21,15 +26,19 @@
 
 	<div>
 		<div id="todo-error"></div>
-		<div class="todoCard ">
-			<form onsubmit="app.todoController.addTodo(event)">
-				<div class=" form-group d-flex justify-content-center container-fluid">
-					<label for="description"></label>
-					<input type="text" name="description" class="form-control " placeholder="Enter Description...">
+		<div class="row container-fluid  ">
+			<div class="col-4 todoCard">
+				<form onsubmit="app.todoController.addTodo(event)">
+					<div class=" form-group d-flex justify-content-center container-fluid">
+						<label for="description"></label>
+						<input type="text" name="description" class="form-control " placeholder="Enter Description...">
+					</div>
+					<button type="submit" class="btn btn-success ">Add Todo</button>
+				</form>
+				<div id="todos" class="row container-fluid justify-content-center">
+
 				</div>
-				<button type="submit" class="btn btn-primary mb-2">Add Todo</button>
-				<div id="todos" class="w-50"></div>
-			</form>
+			</div>
 		</div>
 	</div>
 

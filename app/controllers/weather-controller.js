@@ -17,6 +17,8 @@ export default class WeatherController {
     store.subscribe("weather", drawWeather);
     WeatherService.getWeather();
   }
-
+  changeF_C() {
+    weatherService.changeF_C()
+  }
 }
 

@@ -17,7 +17,10 @@ class WeatherService {
 
     }).catch(err => console.error(err))
   }
-
+  changeF_C() {
+    let temp = store.State.weather.f_c
+    temp == false ? temp = true : false
+  }
 }
 
 const weatherService = new WeatherService();
