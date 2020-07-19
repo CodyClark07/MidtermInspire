@@ -8,18 +8,19 @@ const weatherApi = axios.create({
 });
 
 class WeatherService {
-  async getWeather() {
+  changeF_C() {
+    let temp = store.State.weather.f_c;
+    temp == false ? (temp = true) : (temp = false)
+    console.log(temp)
+  }
+  getWeather() {
     console.log("Calling the Weatherman");
-    await weatherApi.get().then(res => {
+    weatherApi.get().then(res => {
       res.data.main.temp = Math.floor((((res.data.main.temp - 273.15) * 1.8) + 32))
       store.commit("weather", new Weather(res.data));
       console.log(res.data)
 
     }).catch(err => console.error(err))
-  }
-  changeF_C() {
-    let temp = store.State.weather.f_c
-    temp == false ? temp = true : false
   }
 }
 

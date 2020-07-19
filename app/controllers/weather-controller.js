@@ -19,6 +19,7 @@ export default class WeatherController {
   }
   changeF_C() {
     weatherService.changeF_C()
+    drawWeather()
   }
 }
 

@@ -14,33 +14,47 @@
 
 <body id="bg-image">
 	<section>
-		<div id="weather" class="w-25 float-right container-fluid ">
+		<div id="weather" class="row ">
 
 		</div>
 
 	</section>
 
-	<div id="quote">
 
-	</div>
+	<section>
+		<div>
+			<div id="todo-error"></div>
+			<div class="row container-fluid  ">
+				<div class=" todoCard">
+					<form onsubmit="app.todoController.addTodo(event)">
+						<div class=" form-group d-flex justify-content-center container-fluid">
+							<label for="description"></label>
+							<input type="text" name="description" class="form-control "
+								placeholder="Enter Description...">
+						</div>
+						<button type="submit" class="btn btn-success ">Add Todo</button>
+					</form>
+					<div id="todo-count" class="row container-fluid justify-content-center">
 
-	<div>
-		<div id="todo-error"></div>
-		<div class="row container-fluid  ">
-			<div class="col-4 todoCard">
-				<form onsubmit="app.todoController.addTodo(event)">
-					<div class=" form-group d-flex justify-content-center container-fluid">
-						<label for="description"></label>
-						<input type="text" name="description" class="form-control " placeholder="Enter Description...">
 					</div>
-					<button type="submit" class="btn btn-success ">Add Todo</button>
-				</form>
-				<div id="todos" class="row container-fluid justify-content-center">
+					<div id="todos" class="row container-fluid justify-content-center">
 
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+
+	</section>
+	<footer>
+		<div class="row justify-content-center float-right">
+			<div class="col-8 bg-dark align-self-end text-white">
+				<div id="quote">
+
+				</div>
+			</div>
+
+		</div>
+	</footer>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script type="module" src="app/main.js"></script>

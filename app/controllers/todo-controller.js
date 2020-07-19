@@ -1,11 +1,13 @@
 import TodoService from "../services/todo-service.js";
 import store from "../store.js";
+import Todo from "../models/todo.js"
 
 //TODO Create the render function
 function _drawTodos() {
   let template = ''
   store.State.todos.forEach(todo => template += todo.Template)
   document.getElementById("todos").innerHTML = template
+  document.getElementById("todo-count").innerHTML = Todo.todoCountTemplate()
 }
 
 export default class TodoController {

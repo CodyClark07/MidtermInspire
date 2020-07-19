@@ -1,3 +1,4 @@
+import store from "../store.js"
 export default class Todo {
     constructor(data) {
         this.id = data.id || data._id
@@ -14,9 +15,11 @@ export default class Todo {
         <i class="fa fa-trash-o text-danger" onclick="app.todoController.removeTodo('${this.id}')"></i>
        
         `
+    }
 
-
-
-
+    static todoCountTemplate() {
+        return `
+<h5 class="${store.State.todos.length <= 0 ? "hidden" : ""}" >#Todos:${store.State.todos.length}</h5>
+`
     }
 }
