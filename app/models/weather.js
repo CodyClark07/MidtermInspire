@@ -13,8 +13,13 @@ export default class Weather {
     this.celcius = Math.floor((data.main.temp - 32) * 5 / 9)
     if (data.weather) {
       this.icon = data.weather[0].icon
+      this.sky = data.weather[0].main
     }
     this.f_c = data.f_c || false
+    if (data.wind) {
+      this.wind = data.wind.speed
+    }
+
   }
 
 
@@ -25,7 +30,7 @@ export default class Weather {
     return `
     <div class=" bg-weather text-center shadow-lg">
     <h2> ${this.city}</h2>
-    <h2 onclick="app.weatherController.changeF_C()" > ${this.f_c == false ? `${this.faren}°F` : `${this.celcius}°C`}</h2>
+    <h2 onclick="app.weatherController.changeF_C()" > ${this.f_c == false ? `${this.faren}°F` : `${this.celcius}°C`}</h2><h5> wind: ${this.wind}mph</h5><h5>${this.sky}</h5>
     <img src="http://openweathermap.org/img/w/` + `${this.icon}` + `.png">
     </div>`
 
