@@ -8,10 +8,13 @@
   background-size: cover;
 }
 
+.clock-size{
+font-size: 6rem;
 
+}
 .todoCard{
   background-color: rgba(53, 56, 56, 0.452);
-
+position: static;
 }
 
 .bg-weather{
