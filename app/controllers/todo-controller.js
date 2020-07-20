@@ -17,7 +17,7 @@ export default class TodoController {
     store.subscribe("todos", _drawTodos)
   }
 
-  addTodo(e,) {
+  addTodo(e) {
     e.preventDefault();
 
     let form = e.target;
