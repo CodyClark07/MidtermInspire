@@ -16,7 +16,7 @@
 	<header>
 
 
-		<section>
+		<section class="mt-2 pl-5">
 			<div id="weather" class="row ">
 
 			</div>
@@ -24,9 +24,17 @@
 		</section>
 
 	</header>
+	<main>
+		<div class="row justify-content-center">
+			<h1 id="clock" class=" shadow-lg text-center 
+			w-25">
 
+			</h1>
+		</div>
+
+	</main>
 	<footer class="fixed-bottom">
-		<div class="d-flex">
+		<div class="d-flex pl-3">
 			<div class=" text-white todoCard">
 				<form onsubmit="app.todoController.addTodo(event)">
 					<div class=" form-group  ">
@@ -44,7 +52,7 @@
 			</div>
 
 		</div>
-		<div class=" shadow-lg d-flex  text-white">
+		<div class=" shadow-lg d-flex text-wrap justify-content-end text-white mb-3">
 			<div id="quote">
 
 			</div>
