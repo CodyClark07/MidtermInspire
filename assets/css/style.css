@@ -15,10 +15,13 @@
   border:solid 1px black;
 }
 
-/* .bg-weather{
-  background-color: rgba(241, 255, 47, 0.658);
+.bg-weather{
+  text-shadow: 4px 2px red;
+}
 
-} */
+.bg-clock{
+  text-shadow: 4px 2px red;
+}
 .complete{
   text-decoration: line-through;
   color: chartreuse;
